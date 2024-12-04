@@ -1,0 +1,60 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: araveala <araveala@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/04 14:25:22 by araveala          #+#    #+#             */
+/*   Updated: 2024/12/04 14:59:25 by araveala         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+
+#include <stdio.h>
+
+int findReplace(std::string filename,  std::string str1, std::string str2)
+{
+    std::fstream fd;
+    fd.open(filename, std::ios::out); // only out later only in? mayeb both
+    if (!fd.is_open())   
+    {
+        std::cerr<<"unable to open file : "<<filename<<std::endl;
+        return 1;
+    }
+    std::stringstream buffer;
+    size_t index;
+    
+    buffer << fd.rdbuf();
+    std::string content = buffer.str(); // convert the buffer into a string lol
+    for ()
+    {
+        index = content.find(str2);
+        if (index != std::string::npos)
+        {
+            for (int i = 0; i < str2.length(); i++)
+                content[index] = str2[i];
+        }         
+    }
+    fd.close();
+}
+
+int main(int argc, char **argv)
+{
+    if (argc != 3)
+    {
+        std::cout<<"3 argumenst required, filename, string to find, string to replace"<<std::endl;
+        return 1;
+    }
+    if (!argv[2] || !argv[3])
+    {
+        std::cerr<<" one string is empty try again"<<argv[1]<<std::endl;
+        return 1;
+    }
+    findReplace(argv[1], argv[2], argv[3]);
+    return 0;
+}

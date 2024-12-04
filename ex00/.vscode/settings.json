@@ -1,0 +1,10 @@
+{
+	"fileHeaderComment.template": {
+		
+	},
+	"fileHeaderComment.parameter": {
+		
+		"*": {}
+	},
+	"antosoft.autoUpdateHeader.modifiedTimeStart": "[uU]pdated *: "
+}
