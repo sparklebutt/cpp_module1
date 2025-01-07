@@ -6,7 +6,7 @@
 #    By: araveala <araveala@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 12:20:06 by araveala          #+#    #+#              #
-#    Updated: 2024/12/04 12:20:25 by araveala         ###   ########.fr        #
+#    Updated: 2024/12/10 10:46:02 by araveala         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CPPFILES = main.cpp
 
 OFILES = $(CPPFILES:.cpp=.o)
 
-EXEC = megaphone
+EXEC = show_reference
 
 all: $(EXEC)
 	@echo "\033[0;95m Creating executable\033[0m"

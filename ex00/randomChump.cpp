@@ -13,9 +13,14 @@
 
 #include "Zombie.hpp"
 
-void    Zombie::randomChump(std::string name)
+/**
+ * @brief randomChump is a memeber fucntion of the Zombiie class, so instead of using 
+ * a setter i could alternativly use "randomGuy.m_name = name;"
+ *  aswell printing to out accessing the private member directly.  
+ */
+void	Zombie::randomChump(std::string name)
 {
-    Zombie randomGuy;
-    randomGuy.setName(name);
-    randomGuy.announce();
+	Zombie randomGuy;
+	randomGuy.setName(name);
+	randomGuy.announce();
 }

@@ -15,6 +15,7 @@
 #include <fstream>
 #include <sstream>
 
+
 bool openFile(std::fstream& fd, const std::string& filename, std::ios_base::openmode mode)
 { 
     fd.open(filename, mode); 
@@ -25,6 +26,7 @@ bool openFile(std::fstream& fd, const std::string& filename, std::ios_base::open
     } 
     return true;
 }
+
 std::string& replaceLoop(std::string& content, std::string str1, std::string str2)
 {
 	size_t index = 0, i = 0, str1length = 0, str2length = 0;
@@ -39,7 +41,8 @@ std::string& replaceLoop(std::string& content, std::string str1, std::string str
             replace += str2[i];
         for (i = index + str1length; i < content.length(); i++)
             replace += content[i];
-        content = replace; 
+        content = replace;
+        replace.clear();
         index += str2length;
 	}
     return content;
@@ -64,7 +67,7 @@ int main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cout<<"3 argumenst required, filename, string to find, string to replace"<<std::endl;
+		std::cerr<<"3 argumenst required, filename, string to find, string to replace"<<std::endl;
 		return 1;
 	}
 	findReplace(argv[1], argv[2], argv[3]);

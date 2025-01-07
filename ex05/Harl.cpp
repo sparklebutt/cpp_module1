@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shaboom <shaboom@student.42.fr>            +#+  +:+       +#+        */
+/*   By: araveala <araveala@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 11:00:06 by shaboom           #+#    #+#             */
-/*   Updated: 2024/12/05 15:06:27 by shaboom          ###   ########.fr       */
+/*   Updated: 2025/01/07 16:31:33 by araveala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,25 @@ Harl::~Harl() { std::cout<<"destroying harl"<<std::endl; }
 
 void Harl::debug ( void )
 {
-	std::cout<<"debug message"<<std::endl;	
+	std::cout<<"I guess you expect me to do all the debugging for you ????"<<std::endl;	
 }
 void Harl::info ( void )
 {
-	std::cout<<"info message"<<std::endl;	
+	std::cout<<"information is classified, how bothersome"<<std::endl;	
 }
 void Harl::warning ( void )
 {
-	std::cout<<"warning message"<<std::endl;
+	std::cout<<"are you sure we should be filling this balloon with hot sauce!!"<<std::endl;
 }
 void Harl::error ( void )
 {
-	std::cout<<"error message"<<std::endl;
+	std::cout<<"balloon explodes"<<std::endl;
 }
 
 /** 
  * @brief 
  * Created an array containing comparison error level keywords that will be 
- * compared to user input as exact keyword.
+ * compared to user input as EXACT keyword.
  * 
  * Using/typedef an array of memeber function pointers ordered the same as keywords array.
  * if keyword matches user input the corresponding iteration from fucntion pointer array
@@ -60,6 +60,6 @@ void Harl::complain( std::string level )
 			return ;
 		}
 	}
-	std::cerr<<"syntax error does input( "<<level<<" ) match following :"<<std::endl;
+	std::cerr<<"syntax error does input( "<<level<<" ) match following? :"<<std::endl;
 	std::cerr<<"DEBUG\nINFO\nWARNING\nERROR"<<std::endl;
 }
